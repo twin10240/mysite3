@@ -30,8 +30,7 @@ public class BoardController {
 		@RequestParam( value="kwd", required=true, defaultValue="") String keyword,
 		Model model ) {
 		
-		Map<String, Object> map = 
-				boardService.getMessageList( page, keyword );
+		Map<String, Object> map = boardService.getMessageList( page, keyword );
 		
 		model.addAttribute( "map", map );
 		return "board/index";

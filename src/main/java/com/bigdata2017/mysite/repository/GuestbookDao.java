@@ -4,6 +4,8 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.util.StopWatch;
+
 import com.bigdata2017.mysite.vo.GuestbookVo;
 
 @Repository
@@ -17,8 +19,7 @@ public class GuestbookDao {
 	}
 	
 	public int insert(GuestbookVo vo) {
-		int count = sqlSession.insert( 
-				"guestbook.insert", vo);
+		int count = sqlSession.insert("guestbook.insert", vo);
 		System.out.println( "no--->" + vo.getNo() );
 		return count;
 	}

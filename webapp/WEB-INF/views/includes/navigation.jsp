@@ -11,29 +11,47 @@
 						<li><a href="${pageContext.request.contextPath }/guestbook">방명록</a></li>
 						<li><a href="${pageContext.request.contextPath }/guestbook/ajax">방명록(ajax)</a></li>
 						<li><a href="${pageContext.request.contextPath }/board">게시판</a></li>
+						<li><a href="${pageContext.request.contextPath }/gallery">갤러리</a></li>
 					</c:when>
+					
 					<c:when test="${param.menu == 'guestbook' }">
 						<li><a href="${pageContext.request.contextPath }">안대혁</a></li>
 						<li class="selected"><a href="${pageContext.request.contextPath }/guestbook">방명록</a></li>
 						<li><a href="${pageContext.request.contextPath }/guestbook/ajax">방명록(ajax)</a></li>
 						<li><a href="${pageContext.request.contextPath }/board">게시판</a></li>
+						<li><a href="${pageContext.request.contextPath }/gallery">갤러리</a></li>
 					</c:when>
+					
 					<c:when test="${param.menu == 'guestbook-ajax' }">
 						<li><a href="${pageContext.request.contextPath }">안대혁</a></li>
 						<li><a href="${pageContext.request.contextPath }/guestbook">방명록</a></li>
 						<li class="selected"><a href="${pageContext.request.contextPath }/guestbook/ajax">방명록(ajax)</a></li>
 						<li><a href="${pageContext.request.contextPath }/board">게시판</a></li>
-					</c:when>					<c:when test="${param.menu == 'board' }">
+						<li><a href="${pageContext.request.contextPath }/gallery">갤러리</a></li>
+					</c:when>				
+						
+					<c:when test="${param.menu == 'board' }">
 						<li><a href="${pageContext.request.contextPath }">안대혁</a></li>
 						<li><a href="${pageContext.request.contextPath }/guestbook">방명록</a></li>
 						<li><a href="${pageContext.request.contextPath }/guestbook/ajax">방명록(ajax)</a></li>
 						<li class="selected"><a href="${pageContext.request.contextPath }/board">게시판</a></li>
-					</c:when>					
+						<li><a href="${pageContext.request.contextPath }/gallery">갤러리</a></li>
+					</c:when>	
+					
+					<c:when test="${param.menu == 'gallery' }">
+						<li><a href="${pageContext.request.contextPath }">안대혁</a></li>
+						<li><a href="${pageContext.request.contextPath }/guestbook">방명록</a></li>
+						<li><a href="${pageContext.request.contextPath }/guestbook/ajax">방명록(ajax)</a></li>
+						<li><a href="${pageContext.request.contextPath }/board">게시판</a></li>
+						<li class="selected"><a href="${pageContext.request.contextPath }/gallery">갤러리</a></li>
+					</c:when>
+							
 					<c:otherwise>
 						<li><a href="${pageContext.request.contextPath }">안대혁</a></li>
 						<li><a href="${pageContext.request.contextPath }/guestbook">방명록</a></li>
 						<li><a href="${pageContext.request.contextPath }/guestbook/ajax">방명록(ajax)</a></li>
 						<li><a href="${pageContext.request.contextPath }/board">게시판</a></li>
+						<li><a href="${pageContext.request.contextPath }/gallery">갤러리</a></li>
 					</c:otherwise>					
 					
 				</c:choose>

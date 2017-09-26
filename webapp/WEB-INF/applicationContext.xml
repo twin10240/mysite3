@@ -11,10 +11,13 @@
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
         http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+    
+    <!-- auto proxy -->
+    <aop:aspectj-autoproxy/>
 	
 	<context:annotation-config />
 
-	<context:component-scan base-package="com.bigdata2017.mysite.repository, com.bigdata2017.mysite.service, com.bigdata2017.mysite.exception">
+	<context:component-scan base-package="com.bigdata2017.mysite.repository, com.bigdata2017.mysite.service, com.bigdata2017.mysite.exception, com.bigdata2017.mysite.aspect">
 		<context:include-filter type="annotation"
 			expression="org.springframework.stereotype.Repository" />
 		<context:include-filter type="annotation"
@@ -25,7 +28,7 @@
 
 	<!-- oracle datasource -->
     <bean id="oracleDatasource" class="oracle.jdbc.pool.OracleDataSource" destroy-method="close">
-        <property name="URL" value="jdbc:oracle:thin:@localhost:1521:xe" />
+        <property name="URL" value="jdbc:oracle:thin:@192.168.1.20:1521:xe" />
         <property name="user" value="webdb" />
         <property name="password" value="webdb" />
         <property name="connectionCachingEnabled" value="true" />

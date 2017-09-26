@@ -14,7 +14,7 @@ import com.bigdata2017.mysite.service.GuestbookService;
 import com.bigdata2017.mysite.vo.GuestbookVo;
 
 @Controller
-@RequestMapping( "/guestbook" )
+@RequestMapping("/guestbook")
 public class GuestbookController {
 	
 	@Autowired

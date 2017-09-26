@@ -24,8 +24,7 @@ public class GuestbookController {
 	@ResponseBody
 	@RequestMapping("/list")
 	public JSONResult list(
-		@RequestParam( value="no", required=true, defaultValue="0") Long no
-		) {
+		@RequestParam( value="no", required=true, defaultValue="0") Long no) {
 		List<GuestbookVo> list = guestbookService.getMessageList(no);
 		
 		return JSONResult.success(list);
@@ -41,11 +40,8 @@ public class GuestbookController {
 	
 	@ResponseBody
 	@RequestMapping("/delete")
-	public JSONResult delete(
-		@ModelAttribute GuestbookVo guestbookVo 
-		) {
-		boolean bSuccess = 
-				guestbookService.deleteMessage(guestbookVo);
+	public JSONResult delete(@ModelAttribute GuestbookVo guestbookVo) {
+		boolean bSuccess = guestbookService.deleteMessage(guestbookVo);
 		
 		return JSONResult.success( bSuccess ? guestbookVo.getNo() : -1 );
 	}
